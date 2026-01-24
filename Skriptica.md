@@ -1,11 +1,22 @@
+# Tablica tipova podataka
+
+| Vrsta podatka | bool | unsigned char | char | unsigned byte | byte | unsigned int | int | unsigned long | long |
+|---------------|------|---------------|------|---------------|------|--------------|-----|----------------|------|
+| Predznak      | ne   | ne            | da   | ne            | ne   | ne           | da  | ne             | da   |
+| Bajtova       | 1    | 1             | 1    | 1             | 1    | 2            | 2   | 4              | 4    |
+| Minimum       | 0    | 0             | -2⁷⁻¹ | 0             | 0    | 0            | -2¹⁵⁻¹ | 0              | -2³¹⁻¹ |
+| Maksimum      | 2⁸−1 | 2⁸−1          | 2⁷−1 | 2⁸−1          | 2⁸−1 | 2¹⁶−1       | 2¹⁵−1 | 2³²−1         | 2³¹−1 |
+
+<br>
+<br>
+
+
 # Core ideas
 
 Some must-knows for this kolokvij
 
----
 
 <br>
-
 
 ## Code structure
 ```cpp
@@ -72,7 +83,7 @@ delay(500);
 
 These are some repeating things in his codes. Instead of trying to memorize each code, learning these patterns may be more beneficial.
 
----
+
 <br>
 
 

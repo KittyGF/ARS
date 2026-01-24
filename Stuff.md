@@ -59,7 +59,8 @@ delay(500);
 ```
 
 ---
-
+<br>
+<br>
 # Repeating ideas in his codes
 
 These are some repeating things in his codes. Instead of trying to memorize each code, learning these patterns may be more beneficial.

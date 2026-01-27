@@ -35,8 +35,6 @@ void loop() {
 ### Analogna tipkala s vrijednostima {0, 400, 600, 800, 1000} ± 10 postavljaju stanja 4 LED diode sa zajedničkom anodom
 ```cpp
 bool state; // 1B
-bool state[4]; // 1B x 4
- int state[4]; // 2B x 4
 void setup() {
   Serial.begin(9600); // 115200 baudrate
   for(int i=0; i<4; i++) { // index i=0..3
@@ -138,15 +136,13 @@ void loop() {
 ```cpp
 
 void setup() {
-  Serial.begin(9600);
   for(int i=0; i<8; i++) { // index i=0..7
     pinMode(i+2, OUTPUT); // LED
     digitalWrite(i+2, LOW); // LEDs OFF
   }
 }
 void loop() {
-  int x = analogread(A0); // A0-A7 --> 0..1023
-  int n = map(x,330,1000,0,8); // 0..1023 --> 0..8.  broj upaljenih LED
+  int n = map(analogread(A0),330,1000,0,8); // 0..1023 --> 0..8.  broj upaljenih LED
   // 0..8 LED OFF
   for(int i=0; i<8; i++) { // index i=0..7
     digitalWrite(i+2, LOW); // LEDs OFF.           sve ugasi
@@ -673,21 +669,15 @@ void loop () {
 ## Zadatak 22
 ### Kada se sa UART-a primi niz znakova FERIT i znak za kraj niza, na zaslonu računala treba ispisati tekst OK
 ```cpp
-String str;
 void setup() {
   Serial.begin(9600);
 }
 void loop() {
   while (Serial.available()) {
-    char c = Serial.read();
-    if (c == '\n') {
+    String str = Serial.readString();
       if (str == "FERIT" || str.equals("FERIT")) {
         Serial.println("OK");
       }
-      str = "";
-    } else {
-      str += c;
-    }
   }
 }
 ```

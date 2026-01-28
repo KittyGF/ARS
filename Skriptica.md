@@ -1,15 +1,3 @@
-# Tablica tipova podataka
-
-| Vrsta podatka | bool | unsigned char | char | unsigned byte | byte | unsigned int | int | unsigned long | long |
-|---------------|------|---------------|------|---------------|------|--------------|-----|----------------|------|
-| Predznak      | ne   | ne            | da   | ne            | ne   | ne           | da  | ne             | da   |
-| Bajtova       | 1    | 1             | 1    | 1             | 1    | 2            | 2   | 4              | 4    |
-| Minimum       | 0    | 0             | -2⁷−1 | 0             | 0    | 0            | -2¹⁵−1| 0              | -2³¹−1|
-| Maksimum      | 2⁸−1 | 2⁸−1          | 2⁷−1 | 2⁸−1          | 2⁸−1 | 2¹⁶−1       | 2¹⁵−1 | 2³²−1         | 2³¹−1 |
-
-<br>
-<br>
-
 
 # Core ideas
 
